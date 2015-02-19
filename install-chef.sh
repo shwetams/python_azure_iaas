@@ -14,8 +14,8 @@ touch /tmp/install_chef
 curl -L https://www.opscode.com/chef/install.sh | sudo bash
 echo "chef installed with curl" >> /tmp/install_chef
 mkdir /etc/chef
-wget http://devopsfiles.blob.core.windows.net/demo/client.rb -O /etc/chef/client.rb
-wget http://devopsfiles.blob.core.windows.net/demo/validation.pem -O /etc/chef/validation.pem
+wget http://<storage account name>.blob.core.windows.net/demo/client.rb -O /etc/chef/client.rb
+wget http://<storage account name>.blob.core.windows.net/demo/validation.pem -O /etc/chef/validation.pem
 echo "files downloaded" >> /tmp/install_chef
 echo "End of script" >> /tmp/install_chef
 sudo chef-client -r role[percona]
